@@ -1,0 +1,342 @@
+/* ═══════════════════════════════════════════════════
+   PRICING SECTION — Full Layout + Typography
+   Font: 'Segoe UI', system-ui, -apple-system, sans-serif
+═══════════════════════════════════════════════════ */
+
+/* ── Section wrapper ── */
+#pricing {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* ── Header ── */
+.pr-header {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 40px;
+}
+
+.pr-header h2 {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-size: clamp(1.75rem, 4vw, 2.75rem);
+    font-weight: 800;
+    color: #111827;
+    line-height: 1.15;
+    margin-bottom: 14px;
+}
+
+.pr-header h2 span {
+    color: #dc8215;
+}
+
+.pr-header p {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-size: 1rem;
+    color: #6b7280;
+    line-height: 1.7;
+}
+
+/* ── Service Toggle Buttons ── */
+.pr-services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.pr-svc {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 9px 20px;
+    border-radius: 50px;
+    border: 2px solid #e5e7eb;
+    background: #ffffff;
+    color: #374151;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.pr-svc:hover {
+    border-color: #dc8215;
+    color: #dc8215;
+}
+
+.pr-svc.active {
+    background: #dc8215;
+    border-color: #dc8215;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* ── Panel (show/hide) ── */
+.pr-grid {
+    position: relative;
+}
+
+.pr-panel {
+    display: none;
+}
+
+.pr-panel.active {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    align-items: start;
+}
+
+/* ── Card ── */
+.pr-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.pr-card:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.10);
+    transform: translateY(-3px);
+}
+
+.pr-card.popular {
+    border-color: #dc8215;
+    box-shadow: 0 8px 32px rgba(220, 130, 21, 0.15);
+}
+
+/* ── Popular badge ── */
+.pr-popular-badge {
+    position: absolute;
+    top: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #dc8215;
+    color: #ffffff;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 4px 14px;
+    border-radius: 50px;
+    white-space: nowrap;
+}
+
+/* ── Plan name ── */
+.pr-plan-name {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 4px;
+}
+
+/* ── Tagline ── */
+.pr-tagline {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-size: 0.825rem;
+    color: #9ca3af;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+/* ── Price row ── */
+.pr-price-row {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+    margin-bottom: 20px;
+}
+
+.pr-price {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #111827;
+    line-height: 1;
+}
+
+.pr-period {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-size: 0.875rem;
+    color: #9ca3af;
+    font-weight: 400;
+}
+
+/* ── Divider ── */
+.pr-divider {
+    height: 1px;
+    background: #f3f4f6;
+    margin-bottom: 20px;
+}
+
+/* ── Features list ── */
+.pr-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+.pr-features li {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-size: 0.875rem;
+    color: #374151;
+    line-height: 1.5;
+    padding-left: 22px;
+    position: relative;
+}
+
+.pr-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #dc8215;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+/* ── CTA button ── */
+.pr-cta {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 12px 24px;
+    border-radius: 8px;
+    background: #111827;
+    color: #ffffff;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s ease;
+    margin-top: auto;
+}
+
+.pr-cta:hover {
+    background: #dc8215;
+}
+
+.pr-card.popular .pr-cta {
+    background: #dc8215;
+}
+
+.pr-card.popular .pr-cta:hover {
+    background: #b86a10;
+}
+
+/* ── Services section (slider cards) ── */
+.srv-section {
+    padding: 80px 1rem;
+    overflow: hidden;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+.srv-title {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 8px;
+}
+
+.srv-desc {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-size: 0.875rem;
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.srv-readmore {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #dc8215;
+    text-decoration: none;
+}
+
+.srv-readmore:hover {
+    text-decoration: underline;
+}
+
+/* ═══════════════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+    .pr-panel.active {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    #pricing {
+        padding-top: 56px;
+        padding-bottom: 56px;
+    }
+
+    .pr-header h2 {
+        font-size: clamp(1.5rem, 6vw, 2rem);
+    }
+
+    .pr-panel.active {
+        grid-template-columns: 1fr;
+    }
+
+    .pr-services {
+        gap: 8px;
+    }
+
+    .pr-svc {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+
+    .srv-section {
+        padding: 56px 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .pr-card {
+        padding: 28px 20px;
+    }
+}
+
+/* ═══════════════════════════════════════════════════
+   CARD ANIMATIONS — required by pricing tab JS
+═══════════════════════════════════════════════════ */
+@keyframes cardIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes popularIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.97);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
