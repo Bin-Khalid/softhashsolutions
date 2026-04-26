@@ -2643,6 +2643,10 @@ button { cursor: pointer; font-family: inherit; }
   width: 30px;
   border-radius: 100px;
 }
+.nav-link.active {
+  color: #dc8215 !important;
+  font-weight: 700;
+}
 
 /* ─── RESPONSIVE ─── */
 @media (max-width: 900px) {
@@ -2650,4 +2654,9 @@ button { cursor: pointer; font-family: inherit; }
 }
 @media (max-width: 540px) {
   .srv-card { flex: 0 0 100%; }
+}
+@media (max-width: 550px) {
+    #home {
+        padding-top: 3%;
+    }
 }

@@ -20,7 +20,7 @@
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">
     <meta name="author" content="Themesberg">
-
+<script src="https://unpkg.com/flowbite@latest/dist/flowbite.min.js"></script>
     <!-- Social media share -->
     <meta property="og:title"
         content="Softhash Solutions - Secure, Scalable Software for Growing Businesses                ">
@@ -88,30 +88,30 @@
                     <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
 
                         <li>
-                            <a href="#home" class="block py-2 pl-3 pr-4 text-white bg-[#dc8215] rounded
-              lg:bg-transparent lg:text-[#dc8215] lg:p-0">Home</a>
+                            <a href="#home" class=" nav-link block py-2 pl-3 pr-4  rounded
+              lg:bg-transparent text-gray-700 lg:p-0">Home</a>
                         </li>
 
                         <li>
-                            <a href="#services" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100
+                            <a href="#services" class=" nav-link block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100
               hover:bg-gray-50 lg:hover:bg-transparent lg:border-0
               lg:hover:text-[#dc8215] lg:p-0">Services</a>
                         </li>
 
                         <li>
-                            <a href="#about" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100
+                            <a href="#about" class="nav-link block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100
               hover:bg-gray-50 lg:hover:bg-transparent lg:border-0
               lg:hover:text-[#dc8215] lg:p-0">About</a>
                         </li>
 
                         <li>
-                            <a href="#pricing" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100
+                            <a href="#pricing" class=" nav-link block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100
               hover:bg-gray-50 lg:hover:bg-transparent lg:border-0
               lg:hover:text-[#dc8215] lg:p-0">Pricing</a>
                         </li>
 
                         <li>
-                            <a href="#contact" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100
+                            <a href="#contact" class=" nav-link block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100
               hover:bg-gray-50 lg:hover:bg-transparent lg:border-0
               lg:hover:text-[#dc8215] lg:p-0">Contact</a>
                         </li>
@@ -1430,6 +1430,36 @@
             </div>
         </div>
     </footer>
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+   function setActiveLink() {
+    let currentSection = "home"; // ✅ default
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 140;
+        const sectionHeight = section.offsetHeight;
+
+        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+            currentSection = section.getAttribute("id");
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove("active");
+
+        if (link.getAttribute("href") === "#" + currentSection) {
+            link.classList.add("active");
+        }
+    });
+}
+
+    window.addEventListener("scroll", setActiveLink);
+    setActiveLink();
+});
+</script>
     <script>
         (function () {
             var track = document.getElementById('sTrack');
